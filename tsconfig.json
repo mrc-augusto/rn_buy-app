@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "paths": {
+      // Tudo que estiver dentro de src, pode ser importado 
+      // usando o @, por exemplo: import { Home } from '@/app/Home'
+      // ao invés de import { Home } from '../../app/Home'
+      "@/*": ["./src/*"]
+    }
   }
 }
